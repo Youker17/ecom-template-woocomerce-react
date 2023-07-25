@@ -5,10 +5,12 @@ import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
 const features = [
-  "Powerfull online protection.",
-  "Internet without borders.",
-  "Supercharged VPN",
-  "No specific time limits."
+  "Quality Refurbishment",
+  "Affordable Pricing",
+  "Warranty Protection",
+  "Performance Optimization",
+  "Free Shipping",
+  "30-Day Return Policy",
 ]
 
 const Feature = () => {
@@ -36,16 +38,15 @@ const Feature = () => {
 
         <motion.div className="flex flex-col items-end justify-center ml-auto w-full lg:w-9/12" variants={scrollAnimation}>
           <h3 className="text-3xl lg:text-4xl font-medium leading-relaxed text-black-600">
-            We Provide Many Features You Can Use
+            What Makes Us Different?
           </h3>
-          <p className="my-2 text-black-500">
-            You can explore the features that we provide with fun and have their
-            own functions each feature.
+          <p className="my-2 w-full text-start text-black-500">
+          these are the reasons why you should choose us
           </p>
           <ul className="text-black-500 self-start list-inside ml-8">
             {features.map((feature, index) => (
               <motion.li
-                className="relative circle-check custom-list"
+                className="relative mb-2 circle-check custom-list"
                 custom={{duration: 2 + index}}
                 variants={scrollAnimation}
                 key={feature}
