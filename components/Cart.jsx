@@ -20,6 +20,7 @@ export default function Cart() {
     useEffect(() => {
         // localStorage.setItem("cartItems",JSON.stringify(["dsf"]))
         localStorage.getItem("cart") ? setItems(JSON.parse(localStorage.getItem("cart"))) : setItems([])
+        let items = JSON.parse(localStorage.getItem("cart")) || []
         setTotal(items.reduce((acc, item) => acc + (item.price * item.quantity), 0))
         setLoading(false);
     }, [])
