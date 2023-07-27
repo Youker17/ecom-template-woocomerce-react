@@ -1,14 +1,14 @@
 import React, { useMemo } from "react";
 import Image from "next/image";
 import ButtonPrimary from "./misc/ButtonPrimary";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
 const Hero = ({
   listUser = [
     {
-      name: "Satisfied Customers",
+      name: "Customers",
       number: "490",
       icon: "/assets/Icon/heroicons_sm-user.svg",
     },
@@ -18,7 +18,7 @@ const Hero = ({
       icon: "/assets/Icon/gridicons_location.svg",
     },
     {
-      name: "refished Laptops",
+      name: "sold Laptops",
       number: "500",
       icon: "/assets/pc.png",
     },
@@ -32,31 +32,31 @@ const Hero = ({
       id="about"
     >
       <ScrollAnimationWrapper>
-          <motion.div
-            className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
-            variants={scrollAnimation}>
-            <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
+        <motion.div
+          className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
+          variants={scrollAnimation}>
+          <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
+            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
               Quality Computing at Unbeatable Prices At <strong>Remacify</strong>!.
-              </h1>
-              <p className="text-black-500 mt-4 mb-6">
+            </h1>
+            <p className="text-black-500 mt-4 mb-6">
               Discover our selection of budget-friendly refurbished laptops that combine quality, performance, and affordability.
-              </p>
-              <ButtonPrimary>Browse Our Collection</ButtonPrimary>
-            </div>
-            <div className="flex w-full">
-              <motion.div className="h-full w-full" variants={scrollAnimation}>
-                <Image
-                  src="/assets/Illustration1.png"
-                  alt="VPN Illustrasi"
-                  quality={100}
-                  width={612}
-                  height={383}
-                  layout="responsive"
-                />
-              </motion.div>
-            </div>
-          </motion.div>
+            </p>
+            <ButtonPrimary>Browse Our Collection</ButtonPrimary>
+          </div>
+          <div className="flex w-full">
+            <motion.div className="h-full w-full" variants={scrollAnimation}>
+              <Image
+                src="/assets/Illustration1.png"
+                alt="remacify"
+                quality={100}
+                width={612}
+                height={383}
+                layout="responsive"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
       </ScrollAnimationWrapper>
       <div className="relative w-full flex">
         <ScrollAnimationWrapper
@@ -65,7 +65,7 @@ const Hero = ({
             <motion.div
               className="flex items-center justify-start sm:justify-center py-4 sm:py-6 w-8/12 px-4 sm:w-auto mx-auto sm:mx-0"
               key={index}
-              custom={{duration: 2 + index}}
+              custom={{ duration: 2 + index }}
               variants={scrollAnimation}
             >
               <div className="flex mx-auto w-40 sm:w-auto">
@@ -76,16 +76,16 @@ const Hero = ({
                   <p className="text-xl text-black-600 font-bold">
                     {listUsers.number}+
                   </p>
-                  <p className="text-lg text-black-500">{listUsers.name}</p>
+                  <p className="text-xs lg:text-lg text-black-500">{listUsers.name}</p>
                 </div>
               </div>
             </motion.div>
           ))}
-       </ScrollAnimationWrapper>
-       <div
+        </ScrollAnimationWrapper>
+        <div
           className="absolute bg-black-600 opacity-5 w-11/12 roudned-lg h-64 sm:h-48 top-0 mt-8 mx-auto left-0 right-0"
           style={{ filter: "blur(114px)" }}
-       ></div>
+        ></div>
       </div>
     </div>
   );
